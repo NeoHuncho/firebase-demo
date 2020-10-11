@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Basics</title>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyBSq1Ei3gnkmIuCZQgLSBQj_KAPE9PQ_K0",
-    authDomain: "fireship-demo-bc8d5.firebaseapp.com",
-    databaseURL: "https://fireship-demo-bc8d5.firebaseio.com",
-    projectId: "fireship-demo-bc8d5",
-    storageBucket: "fireship-demo-bc8d5.appspot.com",
-    messagingSenderId: "629702413291",
-    appId: "1:629702413291:web:c2816fdf73396c82b5a7ae",
-    measurementId: "G-KRQ9H6EGW7"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
- 
-</script>
-<script src="app.js" defer></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-</head>
-<body>
-    <h1 style="text-align: center; font-family: 'Open Sans'">I love my Eva forever fuckkkk🔥</h1>
-    <h2 style="text-align: center">Me and Eva will build the best earthship ever and live happily ever after</h2>
-    <section id="whenSignedOut">
-<button id="signInBtn"  class="btn btn-primary">Sign in with Google</button>
-    </section>
-    <section id="whenSignedIn" hidden='true'>
-<div id="userDetails">
 
-</div>
-<button id="signOutBtn"  class="btn btn-primary">Sign Out</button>
-    </section>
-</body>
-</html>
+  <script>
+    var firebaseConfig = {
+     
+apiKey: "AIzaSyBSq1Ei3gnkmIuCZQgLSBQj_KAPE9PQ_K0",
+authDomain: "fireship-demo-bc8d5.firebaseapp.com",
+databaseURL: "https://fireship-demo-bc8d5.firebaseio.com",
+projectId: "fireship-demo-bc8d5",
+storageBucket: "fireship-demo-bc8d5.appspot.com",
+messagingSenderId: "629702413291",
+appId: "1:629702413291:web:c2816fdf73396c82b5a7ae",
+measurementId: "G-KRQ9H6EGW7"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="app.js" defer></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+    integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+    crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+  <h1>My Awesome App 🔥</h1>
+
+  <section id="whenSignedOut">
+
+    <button id="signInBtn" class="btn btn-primary">Sign in with Google</button>
+
+  </section>
+
+  <section id="whenSignedIn" hidden="true">
+
+    <div id="userDetails"></div>
+
+    <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+
+  </section>
+
