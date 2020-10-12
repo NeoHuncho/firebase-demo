@@ -57,7 +57,8 @@ auth.onAuthStateChanged(user => {
         }
 
         unsubscribe = thingsRef
-        .where('uid', '==', user.uid) // Requires a query
+        .where('uid', '==', user.uid)
+        .orderBy('createdAt') // Requires a query
         .onSnapshot(querySnapshot => {
             
             // Map results to an array of li elements
